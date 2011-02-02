@@ -1,0 +1,86 @@
+%&-shell-escape
+\documentclass[12pt]{article}
+
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=3cm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{fancyhdr, lastpage}
+\usepackage[pdftex]{graphicx}
+\usepackage{todo}
+\usepackage[debug]{dot2texi}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes,arrows}
+\usepackage{everypage}
+
+\pagestyle{fancy}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{1,1,1}
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=R,
+        basicstyle=\footnotesize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\renewcommand{\theenumii}{\roman{enumii}}
+\renewcommand{\labelenumii}{\theenumii .}
+
+\def\libroot{/Users/pimentel/Documents/templates}
+
+\input{\libroot/probstat/probstat.tex}
+
+% personal vars
+\def\hwnum{1}
+\def\className{DEPT 200A}
+\def\fullName{Harold Pimentel}
+\def\email{pimentel@cs.berkeley.edu}
+\def\dueDate{\today}
+
+\fancyhf{}
+\fancyhead{}
+\fancyhf[RF]{\small \fullName \\ Homework \# \hwnum}
+\fancyhf[LF]{\small \className \\ \dueDate}
+\fancyhf[CF]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+\fancyhf{}
+\fancyhf[RH]{\fullName \\ \texttt{\email}}
+\fancyhf[LH]{\className \\ \dueDate}
+\fancyhf[CH]{{\Large Homework \# \hwnum} }
+\fancyhf[CF]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}}
+\thispagestyle{plain}
+
+\begin{document}
+
+\section*{Problem 1}
+Hi $\V (\overline{X} \giv Y) $
+\end{document}
