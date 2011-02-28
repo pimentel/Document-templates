@@ -8,13 +8,22 @@
 \usepackage{multirow}
 \usepackage{setspace}
 \usepackage{caption}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
 \usepackage{fancyhdr, lastpage}
 \usepackage[pdftex]{graphicx}
 \usepackage{todo}
-\usepackage[debug]{dot2texi}
+\usepackage{dot2texi}
 \usepackage{tikz}
-
 \usetikzlibrary{shapes,arrows}
+
+% resize section and subsection (make smaller)
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesection}{1em}{}
+
 \usepackage{everypage}
 
 \pagestyle{fancy}
@@ -51,6 +60,7 @@
 \renewcommand{\theenumii}{\roman{enumii}}
 \renewcommand{\labelenumii}{\theenumii .}
 
+% set this variable to your templates directory
 \def\libroot{/Users/pimentel/Documents/templates}
 
 \input{\libroot/probstat/probstat.tex}
@@ -82,5 +92,5 @@
 \begin{document}
 
 \section*{Problem 1}
-Hi $\V (\overline{X} \giv Y) $
+Hi $\V (\overline{X} \giv Y) \what{X}$
 \end{document}
