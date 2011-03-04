@@ -37,11 +37,14 @@
 	backgroundcolor=\color{lbcolor},
 	tabsize=4,
 	rulecolor=,
-	language=R,
-        basicstyle=\footnotesize,
+    language=R,
+        basicstyle=\footnotesize\ttfamily,
         upquote=true,
         aboveskip={1.5\baselineskip},
         columns=fixed,
+        numbers=left,
+        numberstyle=\footnotesize\ttfamily,
+        stepnumber=1,
         showstringspaces=false,
         extendedchars=true,
         breaklines=true,
@@ -55,6 +58,7 @@
         commentstyle=\color[rgb]{0.133,0.545,0.133},
         stringstyle=\color[rgb]{0.627,0.126,0.941},
 }
+
 \renewcommand{\theenumi}{\alph{enumi}}
 \renewcommand{\labelenumi}{(\theenumi)}
 \renewcommand{\theenumii}{\roman{enumii}}
